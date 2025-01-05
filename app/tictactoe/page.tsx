@@ -8,7 +8,6 @@ export default function TicTacToe() {
     ["", "", ""],
   ]);
   const [mark, setMark] = useState("X");
-
   const [winner, setWinner] = useState("");
   function evaluate() {
     for (let i = 0; i < 3; i++) {
