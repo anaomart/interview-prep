@@ -122,7 +122,7 @@ const Display = ({
 
 }) => {
   const { name, isFolder, children ,Icon} = folder;
-  const [open , setOpen] = useState(true)
+  const [open , setOpen] = useState(false)
   if (children && children?.length == 0) {
     return <p className="flex items-center gap-1" style={{ marginLeft: `${marginLeft}px`,}}> 
       <Icon size={18}/>
@@ -136,7 +136,7 @@ const Display = ({
       }}
     >
       <div className=" flex items-center gap-2">
-      {isFolder && <button className=" " onClick={()=>setOpen(prev =>!prev)}>{`>`}</button> }
+      {isFolder && <button className={`${open ? "rotate-90" : ""} transform transition-all`} onClick={()=>setOpen(prev =>!prev)}>{`>`}</button> }
       <p className="flex items-center gap-1">
       <Icon size={18}/>
         {name}</p>
