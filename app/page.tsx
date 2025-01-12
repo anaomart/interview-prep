@@ -29,6 +29,12 @@ export default function page() {
       >
         move selected
       </Link>
+      <Link
+        className="border-2 p-2 m-10 h-full my-10 bg-blue-500"
+        href={"/folder"}
+      >
+       folder Structure
+      </Link>
     </div>
   );
 }
